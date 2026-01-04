@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quote Generator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inspire Me - Random Quote Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+
     <div class="quote-container">
-        <p id="quote">Click the button to get a quote!</p>
-        <p id="author"></p>
+      <p id="quote">Click the button to get a quote!</p>
+      <p id="author"></p>
+
+      <div class="button-group">
         <button id="new-quote">New Quote</button>
-        <a id="tweet-quote" target="_blank">Tweet this quote</a>
+        <button id="copy-quote">Copy</button>
+        <button id="read-quote">🔊 Listen</button>
+        <button id="fav-quote">❤️ Favorite</button>
+        <a id="tweet-quote" target="_blank">Tweet</a>
+      </div>
+    </div>
+
+    <div class="favorites-section">
+      <h3>Your Favorite Quotes</h3>
+      <ul id="favorites-list"></ul>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

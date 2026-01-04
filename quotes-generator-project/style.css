@@ -1,35 +1,80 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  transition: background 0.5s ease, color 0.3s ease;
+  background-color: #f4f4f4;
+}
+
+body.dark-mode {
+  background-color: #1a1a1a !important;
+  color: #ffffff;
+}
+
+body.dark-mode .quote-container {
+  background-color: #333;
+  color: white;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
 
 .quote-container {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
 }
 
-button, a {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-button {
-    background-color: #3498db;
-}
-
+button,
 a {
-    background-color: #1da1f2;
-    display: inline-block;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: #3498db;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #555;
+}
+
+/* Favorites List Styling */
+.favorites-section {
+  margin-top: 40px;
+  width: 90%;
+  max-width: 500px;
+}
+
+#favorites-list li {
+  background: white;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  list-style: none;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode #favorites-list li {
+  background: #444;
 }
